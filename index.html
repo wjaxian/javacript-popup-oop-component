@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Popup</title>
+</head>
+<body>
+	<div id="popup"></div>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		new Popup("popup",{
+			width:400,
+			opacity:0.5,
+			promptText:"您确定要进行保存吗？",
+			promptState: "help",
+			closePopupTime:false,
+			btns: [{
+				value: '确认',
+				bgColor: "#19BD9B",
+				valueColor:"#fff",
+				hoverColor:"rgba(0,0,0,.5)",
+				btnType: "ok",
+				width: 70,
+				height: 30,
+				closePopup:10,
+				callback:function(){
+					new Popup("popup",{
+						width: 230,
+						opacity: 0.3,
+						promptText:"保存成功",
+						promptState: "success",
+						closePopupTime: 1000,
+						btns: false
+					});
+				}
+			},{
+				value: "我要缓存",
+				bgColor: "",
+				valueColor:"#fff",
+				hoverColor:"rgba(0,0,0,.5)",
+				btnType: "save",
+				width: 100,
+				height: 30,
+				closePopup:30,
+				callback:function(){
+					new Popup("popup",{
+						width: 230,
+						opacity: 0.3,
+						promptText:"缓存失败",
+						promptState: "error",
+						closePopupTime: 1000,
+						btns: false
+					});
+				}
+			},{
+				value: "取消",
+				bgColor: "pink",
+				valueColor:"#fff",
+				hoverColor:"rgba(0,0,0,.5)",
+				btnType: "cancel",
+				width: 70,
+				height: 30,
+				closePopup:30,
+				callback:function(){
+					new Popup("popup",{
+						width: 230,
+						opacity: 0.3,
+						promptText:"正在取消",
+						promptState: "warning",
+						closePopupTime: 1000,
+						btns: false
+					});
+				}
+			}]
+		});
+	</script>
+</body>
+</html>

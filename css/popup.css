@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+*{margin: 0;padding: 0;}
+
+html,body,#popup{height:100%;}
+
+#popup .popup-container{position:absolute;left:50%;top:50%;width: 340px;background:#fff;border-radius: 5px;padding:30px;}
+#popup .popup-container-content:after{content:'';display: block;width: 0;height: 0;overflow: hidden;zoom:1;clear:both;}
+#popup .popup-mask{position:fixed;left:0;top:0;bottom:0;right:0;background:#000;opacity: .5;filter:alpha(opacity=50);}
+#popup .popup-container-content{}
+#popup .popup-container-content-icon{float:left;width:36px;height:36px;}
+
+/* 四种图标提示状态 */
+/* 成功 */
+#popup .success{background:url(../images/icon.png) -10px -51px no-repeat;}
+/* 错误 */
+#popup .error{background:url(../images/icon.png) -52px -52px no-repeat;}
+/* 警示 */
+#popup .warning{background:url(../images/icon.png) -54px -10px no-repeat;}
+/* 问答 */
+#popup .help{background:url(../images/icon.png) -10px -10px no-repeat;}
+
+#popup .popup-container-content-text{float:left;font-size:22px;line-height: 38px;margin-left:10px;}
+#popup .popup-container-btns{text-align: right;}
+#popup .popup-container-btns input{width: 70px;height: 30px;color:#fff;border:none;border-radius:3px;cursor:pointer;margin:0 10px;margin-top:20px;}
+
+/* 四种按钮颜色状态 */
+#popup .popup-container-btns .ok{background:#19BD9B;}
+#popup .popup-container-btns .cancel{background:#CACFD3;}
+#popup .popup-container-btns .delete{background:#E84C3D;}
+#popup .popup-container-btns .save{background:#3399DB;}
